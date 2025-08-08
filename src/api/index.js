@@ -3,6 +3,11 @@ import { pool } from "../models/db.js";
 
 const app = express();
 
+
+app.get("/",(req,res) => {
+    res.status(200).json({sucesso: true})
+})
+
 app.get("/api/services", async (_, res) => {
   try {
     const query = await pool.query("SELECT * FROM servicos");
