@@ -1,12 +1,16 @@
 import express from "express";
 import { pool } from "../models/db.js";
+import cors from "cors";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
+app.use(cors());
 
-
-app.get("/",(req,res) => {
-    res.status(200).json({sucesso: true})
-})
+app.get("/", (_, res) => {
+  res.status(200).json({ sucesso: true });
+});
 
 app.get("/services", async (_, res) => {
   try {
@@ -18,6 +22,4 @@ app.get("/services", async (_, res) => {
   }
 });
 
-
 app.listen(3005, () => console.log("Api rodando..."));
-
