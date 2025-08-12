@@ -2,9 +2,9 @@ import express from "express";
 import { getServices } from "../controller/serviceController.js";
 import { booking } from "../controller/bookingController.js";
 
-const Router = express.Router();
+const router = express.Router();
 
-Router.get("/services", getServices);
-Router.post("/booking", booking);
+router.get("/services", getServices);
+router.post("/booking", booking);
 
-export { Router };
+export { router };
