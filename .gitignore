@@ -4,5 +4,3 @@
 # dotenv environment variables file
 .env
 .vercel
-
-/img/
