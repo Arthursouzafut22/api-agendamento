@@ -5,6 +5,7 @@ import { timesController } from "../controller/timesController.js";
 
 const router = express.Router();
 
+router.get("/", (_, res) => res.json({ sucesso: true }));
 router.get("/services", getServices);
 router.post("/booking", booking);
 router.get("/horarios-disponiveis", timesController);

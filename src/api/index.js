@@ -6,6 +6,7 @@ import path from "path";
 
 dotenv.config();
 
+const PORT = process.env.PORT || 3005;
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -14,4 +15,4 @@ app.use("/imagem", express.static(path.resolve("img/image")));
 
 
 
-app.listen(3005, () => console.log("Api rodando..."));
+app.listen(PORT, () => console.log("Api rodando..."));
