@@ -1,11 +1,11 @@
-import { Booking } from "../models/bookingModel.js";
+import { Booking } from "../models/BookingModel.js";
 
 const model = new Booking();
 
 export async function booking(req, res) {
-  const { cliente, telefone, servico, data, horario } = req.body;
+  const { Nome, Telefone, Servico, Data, Horario } = req.body;
 
-  if (!cliente || !telefone || !servico || !data || !horario) {
+  if (!Nome || !Telefone || !Servico || !Data || !Horario) {
     return res.status(400).json({ error: "Os dados são obrigatórios." });
   }
   try {

@@ -1,4 +1,4 @@
-import { ServiceModel } from "../models/serviceModel.js";
+import { ServiceModel } from "../models/ServiceModel.js";
 
 const model = new ServiceModel();
 
