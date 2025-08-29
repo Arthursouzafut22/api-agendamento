@@ -13,6 +13,4 @@ app.use(cors());
 app.use(router);
 app.use("/imagem", express.static(path.resolve("img/image")));
 
-
-
 app.listen(PORT, () => console.log("Api rodando..."));
