@@ -1,4 +1,4 @@
-import { Booking } from "../models/BookingModel.js";
+import { Booking } from "../models/bookingModel.js";
 
 const model = new Booking();
 

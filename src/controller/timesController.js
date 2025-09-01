@@ -1,4 +1,4 @@
-import { TimesModel } from "../models/TimesModel.js";
+import { TimesModel } from "../models/timesModel.js";
 
 const time = new TimesModel();
 

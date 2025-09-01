@@ -2,7 +2,8 @@ import express from "express";
 import { getServices } from "../controller/serviceController.js";
 import { booking } from "../controller/bookingController.js";
 import { timesController } from "../controller/timesController.js";
-import { userSchedule } from "../controller/UserScheduleController.js";
+import { userSchedule } from "../controller/userScheduleController.js";
+
 
 const router = express.Router();
 

@@ -1,6 +1,6 @@
-import { UserScheduleModel } from "../models/UserScheduleModel.js";
+import { UserScheduleModel } from '../models/userScheduleModel.js';
 
-const scheduleModel = new UserScheduleModel();
+const scheduleModel = new UserScheduleModel()
 
 export async function userSchedule(req, res) {
   const { id } = req.params;
