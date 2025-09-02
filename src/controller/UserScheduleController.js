@@ -1,8 +1,8 @@
-import { UserScheduleModel } from '../models/userScheduleModel.js';
+import { UserScheduleModel } from '../models/UserScheduleModel.js';
 
 const scheduleModel = new UserScheduleModel()
 
-export async function userSchedule(req, res) {
+export async function userScheduleController(req, res) {
   const { id } = req.params;
 
   if (!id) {
