@@ -10,10 +10,10 @@ class Booking {
     usuario_id,
   }) => {
     const query = await pool.query(
-      "INSERT INTO agendamentos (cliente, telefone, servico, data, horario, usuario_id) VALUES ($1,$2,$3,$4,$5,$6)",
+      "INSERT INTO agendamentos (cliente, telefone, servico, data, horario, usuario_id) VALUES ($1,$2,$3,$4,$5,$6) RETURNING id",
       [Nome, Telefone, Servico, Data, Horario, usuario_id]
     );
-    return query;
+    return query.rows[0];
   };
 }
 
