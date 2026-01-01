@@ -9,12 +9,10 @@ export const bot = new Telegraf(process.env.TOKEN);
 // Receber o callback do bot...
 bot.on("callback_query", async (ctx) => {
   const data = ctx.callbackQuery.data;
-  console.log(ctx.callbackQuery);
 
   if (!data) return;
 
   const [acao, agendamentoId] = data.split("_");
-  console.log(acao)
 
   let status = "Pendente";
 
@@ -30,10 +28,11 @@ bot.on("callback_query", async (ctx) => {
     status === "aceito" ? "Agendamento aceito ✅" : "Agendamento recusado ❌"
   );
 
-  await ctx.editMessageText(`*Agendamento ${status.toUpperCase()}*`, {
-    parse_mode: "MarkdownV2",
-  });
+  await ctx.editMessageText(`Agendamento ${status.toUpperCase()}`);
+
 });
+
+bot.launch();
 
 // Enviar o agendamento para o bot...
 export async function sendScheduling({
