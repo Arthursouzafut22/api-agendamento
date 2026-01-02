@@ -29,10 +29,7 @@ bot.on("callback_query", async (ctx) => {
   );
 
   await ctx.editMessageText(`Agendamento ${status.toUpperCase()}`);
-
 });
-
-bot.launch();
 
 // Enviar o agendamento para o bot...
 export async function sendScheduling({
