@@ -9,6 +9,7 @@ export const bot = new Telegraf(process.env.TOKEN);
 // Receber o callback do bot...
 bot.on("callback_query", async (ctx) => {
   const data = ctx.callbackQuery.data;
+  console.log("Callback recebido", ctx.update);
 
   if (!data) return;
 

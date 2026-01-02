@@ -9,9 +9,9 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3005;
-app.use(express.json());
 app.use(cors());
 app.use("/telegram", bot.webhookCallback("/telegram"));
+app.use(express.json());
 app.use(router);
 app.use("/imagem", express.static(path.resolve("img/image")));
 
